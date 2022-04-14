@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: technical-test-renderer
+
+server:
+  port: 8081
