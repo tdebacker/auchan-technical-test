@@ -4,7 +4,7 @@ Salut et bienvenue ici. Auchan te propose de consacrer un peu de temps pour nous
 
 Tu trouveras ici le squelette d'un projet **Spring Reactive (JAVA)** / **MongoDB** (technical-test-api) et la partie front sera en **Thymeleaf** (technical-test-renderer).
 
-Prenons l'exemple d'une **bibliothèque** composée d'une collection de **Books(id, title, publicationDate)** qui possèdent chacun un **Autor(id, name, gender)**.
+Prenons l'exemple d'une **bibliothèque** composée d'une collection de **Books(id, title, publicationDate)** qui possèdent chacun une collection **Autor(id, name, gender)**.
 Cette petite biliothèque possède quelques livres.
 Tu dois afficher cette bibliothèque en précisant pour chaque livre qui est l'auteur lui correspondant.
 
