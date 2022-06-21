@@ -1,12 +1,13 @@
 # **`Technical test`**
-
 Salut et bienvenue ici. Auchan te propose de consacrer un peu de temps pour nous exposer tes talents.
 
 Tu trouveras ici le squelette d'un projet **Spring Reactive (JAVA)** / **MongoDB** (technical-test-api) et la partie front sera en **Thymeleaf** (technical-test-renderer).
 
-Prenons l'exemple d'une **bibliothèque** composée d'une collection de **Books(id, title, publicationDate)** qui possèdent chacun une collection **Autor(id, name, gender)**.
+Prenons l'exemple d'une **bibliothèque** composée d'une collection de **Books(id, title, publicationDate)**
+Il y a également une deuxième collection **Autor(id, name, gender)**.
 Cette petite biliothèque possède quelques livres.
 Tu dois afficher cette bibliothèque en précisant pour chaque livre qui est l'auteur lui correspondant.
+Il nous faudra bien sûr des formulaires pour ajouter un livre, un auteur et même un formulaire d'édition des auteurs.
 
 Pas de fioritures, pas de piège, pas de bonne ou mauvaise façon de faire, ce sera juste l'occasion pour toi de créer un support sur lequel baser notre prochaine rencontre.
 
