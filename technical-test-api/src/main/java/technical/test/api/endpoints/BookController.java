@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import technical.test.api.document.Book;
 import technical.test.api.endpoints.dto.BookDTO;
 import technical.test.api.services.BookService;
 
@@ -20,8 +23,14 @@ public class BookController {
         bookService.create(bookDTO);
     }
 
-    public ResponseEntity<BookDTO> findById(@PathVariable int id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<Mono<Book>> findById(@PathVariable int id) {
         return new ResponseEntity<>(bookService.findById(id), HttpStatus.OK);
+    }
+
+    @GetMapping
+    public ResponseEntity<Flux<Book>> findAll() {
+        return new ResponseEntity<>(bookService.findAll(), HttpStatus.OK);
     }
 
 }
