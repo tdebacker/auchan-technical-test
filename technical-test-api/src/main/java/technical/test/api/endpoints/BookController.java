@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import technical.test.api.document.Book;
-import technical.test.api.endpoints.dto.BookDTO;
 import technical.test.api.services.BookService;
 
 @RestController
@@ -19,8 +18,8 @@ public class BookController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody BookDTO bookDTO) {
-        bookService.create(bookDTO);
+    public void create(@RequestBody Book book) {
+        bookService.create(book);
     }
 
     @GetMapping("/{id}")

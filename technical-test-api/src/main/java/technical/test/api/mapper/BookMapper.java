@@ -9,14 +9,12 @@ import technical.test.api.endpoints.dto.BookDTO;
 @AllArgsConstructor
 public class BookMapper {
 
-    private final AuthorMapper authorMapper;
-
     public Book dtoToEntity(BookDTO bookDTO) {
         Book book = new Book();
         book.setId(bookDTO.getId());
         book.setTitle(bookDTO.getTitle());
         book.setPublicationDate(bookDTO.getPublicationDate());
-        book.setAuthor(authorMapper.dtoToEntity(bookDTO.getAuthor()));
+        book.setAuthorId(book.getAuthorId());
 
         return book;
     }

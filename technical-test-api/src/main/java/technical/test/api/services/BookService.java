@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import technical.test.api.document.Book;
-import technical.test.api.endpoints.dto.BookDTO;
-import technical.test.api.mapper.BookMapper;
 import technical.test.api.repository.BookRepository;
 
 @Service
@@ -15,10 +13,7 @@ public class BookService {
 
     private final BookRepository bookRepository;
 
-    private final BookMapper bookMapper;
-
-    public void create(BookDTO bookDTO) {
-        Book book = bookMapper.dtoToEntity(bookDTO);
+    public void create(Book book) {
         bookRepository.save(book).subscribe();
     }
 
