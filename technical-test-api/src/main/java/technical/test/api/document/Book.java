@@ -21,6 +21,6 @@ public class Book {
 
     private LocalDate publicationDate;
 
-    private int authorId;
+    private Author author;
 
 }
